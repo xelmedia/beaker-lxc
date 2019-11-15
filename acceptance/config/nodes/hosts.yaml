@@ -1,0 +1,23 @@
+---
+HOSTS:
+  ubuntu1604-64-1:
+    platform: ubuntu-1604-x86_64 
+    hypervisor: lxc
+    image: ubuntu:18.04
+    roles:
+      - master
+      - agent
+      - dashboard
+      - database
+      - classifier
+      - default
+  ubuntu1604-64-2:
+    platform: ubuntu-1604-x86_64
+    hypervisor: lxc
+    image: ubuntu:18.04
+    roles:
+      - agent
+CONFIG:
+  nfs_server: none
+  consoleport: 443
+  log_level: verbose
