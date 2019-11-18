@@ -14,6 +14,8 @@ module Beaker
     "ubuntu-18.04-x86_64"
   ]
 
+  #TODO: Taken from beaker-docker. Needs to be implemented
+
   describe Lxc do
     # let(:hosts) {
     #   the_hosts = make_hosts

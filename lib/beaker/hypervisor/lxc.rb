@@ -3,7 +3,7 @@ module Beaker
 
     # LXC Hypervisor
     def initialize(hosts, options)
-      require 'lxc'
+      #require 'lxc'
 
       @options = options
       @logger  = options[:logger]
@@ -88,10 +88,10 @@ module Beaker
               bash("sed -ri 's/^#?PasswordAuthentication .*/PasswordAuthentication yes/' /etc/ssh/sshd_config")
               bash("echo root:#{root_password} | chpasswd")
               if image =~ /ubuntu/
-                bash("restart ssh")
+                bash("systemctl restart ssh")
               end
               if image =~ /debian/
-                bash("systemctl restart sshd")
+              bash("systemctl restart sshd")
               end
             when /^el-/, /centos/, /fedora/, /redhat/, /eos/
               # HACK to fix lxc issue
@@ -135,7 +135,7 @@ module Beaker
           # Append the hash with default "root:root" password
           host['ssh'].merge!(ssh_password)
         end
-        hack_etc_hosts @hosts, @options
+        #hack_etc_hosts @hosts, @options
       end
     end
 

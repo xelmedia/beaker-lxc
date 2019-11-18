@@ -1,10 +1,10 @@
-# beaker-docker
+# beaker-lxc
 
-Beaker library to use docker hypervisor
+Beaker library to use lxc hypervisor. The code is copied from https://github.com/Obmondo/beaker. But instead only holds the code for the lxc hypervisor, using a setup similar to https://github.com/puppetlabs/beaker-docker
 
 # How to use this wizardry
 
-This gem that allows you to use hosts with [docker](docker.md) hypervisor with [beaker](https://github.com/puppetlabs/beaker).
+This gem that allows you to use hosts with [lxc](lxc.md) hypervisor with [beaker](https://github.com/puppetlabs/beaker).
 
 Beaker will automatically load the appropriate hypervisors for any given hosts file, so as long as your project dependencies are satisfied there's nothing else to do. No need to `require` this library in your tests.
 
@@ -27,17 +27,11 @@ s.add_runtime_dependency 'beaker-aws'
 
 # Spec tests
 
-Spec test live under the `spec` folder. There are the default rake task and therefore can run with a simple command:
-```bash
-bundle exec rake test:spec
-```
+Currently not implemented
 
 # Acceptance tests
 
-There is a simple rake task to invoke acceptance test for the library: 
-```bash
-bundle exec rake test:acceptance
-```
+Currently not implemented
 
 # Contributing
 

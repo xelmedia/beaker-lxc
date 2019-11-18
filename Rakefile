@@ -1,5 +1,7 @@
 require 'rspec/core/rake_task'
 
+#TODO: See what needs to be used from this file
+
 namespace :test do
 
   namespace :spec do
